@@ -10,3 +10,7 @@ The feature was I build for this project:
 - Favorite Movie
 - Detail Movie
 
+### How to Install
+1. Clone this project
+2. Open folder -> Open terminal on folder -> run 'pod install'
+3. Open the project with Xcode -> Build the project (Command + B) -> Running the project (Command + R)
