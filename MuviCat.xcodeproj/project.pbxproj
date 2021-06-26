@@ -57,6 +57,7 @@
 		23CE9AC1267CAC9D009C46A1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23CE9ABF267CAC9D009C46A1 /* DetailViewController.xib */; };
 		23CE9AC3267CAD2B009C46A1 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */; };
 		23CE9AC5267CAD51009C46A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9AC4267CAD51009C46A1 /* String+Ext.swift */; };
+		69B02F8838754B54F6110FC5 /* Pods_MuviCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75594C3B28B319BE4269821C /* Pods_MuviCat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,9 @@
 		23CE9ABF267CAC9D009C46A1 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		23CE9AC4267CAD51009C46A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		75594C3B28B319BE4269821C /* Pods_MuviCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuviCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		779FC7549DBA94CFE7E03B58 /* Pods-MuviCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.debug.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE61ADD91AC5E6E4769297C /* Pods-MuviCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.release.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B02F8838754B54F6110FC5 /* Pods_MuviCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +133,8 @@
 		0AB101BA97C55585900FF304 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				779FC7549DBA94CFE7E03B58 /* Pods-MuviCat.debug.xcconfig */,
+				FDE61ADD91AC5E6E4769297C /* Pods-MuviCat.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 				23CE9A63267C489E009C46A1 /* MuviCat */,
 				23CE9A62267C489E009C46A1 /* Products */,
 				0AB101BA97C55585900FF304 /* Pods */,
+				9A7201F03D9E617D76D9C7EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -439,6 +447,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		9A7201F03D9E617D76D9C7EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75594C3B28B319BE4269821C /* Pods_MuviCat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,9 +462,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23CE9A78267C48A1009C46A1 /* Build configuration list for PBXNativeTarget "MuviCat" */;
 			buildPhases = (
+				EAF73A88BDC32BBAEDACF1B2 /* [CP] Check Pods Manifest.lock */,
 				23CE9A5D267C489E009C46A1 /* Sources */,
 				23CE9A5E267C489E009C46A1 /* Frameworks */,
 				23CE9A5F267C489E009C46A1 /* Resources */,
+				FD14B76221F2E0D0E04E27E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -512,6 +530,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAF73A88BDC32BBAEDACF1B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuviCat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD14B76221F2E0D0E04E27E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuviCat/Pods-MuviCat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuviCat/Pods-MuviCat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuviCat/Pods-MuviCat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23CE9A5D267C489E009C46A1 /* Sources */ = {
@@ -699,6 +759,7 @@
 		};
 		23CE9A79267C48A1009C46A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 779FC7549DBA94CFE7E03B58 /* Pods-MuviCat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -718,6 +779,7 @@
 		};
 		23CE9A7A267C48A1009C46A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE61ADD91AC5E6E4769297C /* Pods-MuviCat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
