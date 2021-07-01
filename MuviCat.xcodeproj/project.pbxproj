@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230C71FC268D7C4E0003CA2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C71FA268D7C4E0003CA2C /* ProfileViewController.swift */; };
+		230C71FF268D9A300003CA2C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C71FE268D9A300003CA2C /* ProfileView.swift */; };
+		230C7201268D9F080003CA2C /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C7200268D9F080003CA2C /* UIView+Ext.swift */; };
 		2333CE462686D9360094C085 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333CE452686D9360094C085 /* LoadingState.swift */; };
 		233C0F28267E4F5E00424122 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233C0F26267E4F5E00424122 /* SliderCollectionViewCell.swift */; };
 		233C0F29267E4F5E00424122 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233C0F27267E4F5E00424122 /* SliderCollectionViewCell.xib */; };
@@ -61,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230C71FA268D7C4E0003CA2C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		230C71FE268D9A300003CA2C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		230C7200268D9F080003CA2C /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		2333CE452686D9360094C085 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		233C0F26267E4F5E00424122 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		233C0F27267E4F5E00424122 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -137,6 +143,15 @@
 				FDE61ADD91AC5E6E4769297C /* Pods-MuviCat.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		230C71F9268D7C1D0003CA2C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				230C71FA268D7C4E0003CA2C /* ProfileViewController.swift */,
+				230C71FE268D9A300003CA2C /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		233C0F25267E4EDA00424122 /* ViewCell */ = {
@@ -217,7 +232,6 @@
 				23CE9A82267C50FA009C46A1 /* App */,
 				23CE9A83267C50FF009C46A1 /* Core */,
 				23CE9A84267C5105009C46A1 /* Module */,
-				23CE9A81267C50ED009C46A1 /* Preview Content */,
 				23CE9A80267C50DD009C46A1 /* Supporting Files */,
 			);
 			path = MuviCat;
@@ -231,13 +245,6 @@
 				23CE9A75267C48A1009C46A1 /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		23CE9A81267C50ED009C46A1 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		23CE9A82267C50FA009C46A1 /* App */ = {
@@ -268,6 +275,7 @@
 				23CE9A85267C56BA009C46A1 /* Home */,
 				23CE9A86267C56BF009C46A1 /* Search */,
 				23CE9A87267C56C5009C46A1 /* Favorite */,
+				230C71F9268D7C1D0003CA2C /* Profile */,
 				23CE9ABD267CAC8C009C46A1 /* Detail */,
 			);
 			path = Module;
@@ -395,6 +403,7 @@
 				23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */,
 				23CE9AC4267CAD51009C46A1 /* String+Ext.swift */,
 				235F54F8267F258000AE1036 /* UIViewController+Ext.swift */,
+				230C7200268D9F080003CA2C /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -590,6 +599,7 @@
 				233C0F3D267EDB4300424122 /* SearchInteractor.swift in Sources */,
 				23CE9AB6267CAC1E009C46A1 /* SearchViewController.swift in Sources */,
 				23CE9A69267C489E009C46A1 /* MainViewController.swift in Sources */,
+				230C7201268D9F080003CA2C /* UIView+Ext.swift in Sources */,
 				23CE9AC0267CAC9D009C46A1 /* DetailViewController.swift in Sources */,
 				23CE9AC5267CAD51009C46A1 /* String+Ext.swift in Sources */,
 				23558EF526857E8A00EFD5C0 /* CastModel.swift in Sources */,
@@ -610,10 +620,12 @@
 				23CE9A67267C489E009C46A1 /* SceneDelegate.swift in Sources */,
 				233C0F38267ECEF000424122 /* SearchCollectionViewCell.swift in Sources */,
 				23481A5A2685F82600364346 /* CastMapper.swift in Sources */,
+				230C71FF268D9A300003CA2C /* ProfileView.swift in Sources */,
 				23CE9AAC267C9153009C46A1 /* HomeViewModel.swift in Sources */,
 				233C0F44267EFC0900424122 /* FavoriteInteractor.swift in Sources */,
 				235F54F7267F16B700AE1036 /* Utils.swift in Sources */,
 				233C0F3B267ED83F00424122 /* SearchViewModel.swift in Sources */,
+				230C71FC268D7C4E0003CA2C /* ProfileViewController.swift in Sources */,
 				23CE9AB0267C96F5009C46A1 /* Injection.swift in Sources */,
 				23CE9AAA267C90AC009C46A1 /* HomeInteractor.swift in Sources */,
 			);

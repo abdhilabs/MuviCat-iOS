@@ -34,6 +34,14 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         return UINavigationController(rootViewController: vc)
     }()
     
+    private lazy var profile: UIViewController = {
+        let vc = ProfileViewController()
+        let image = UIImage(systemName: "person.circle")
+        let selectedImage = UIImage(systemName: "person.circle.fill")
+        vc.tabBarItem = UITabBarItem(title: "Profile", image: image, selectedImage: selectedImage)
+        return UINavigationController(rootViewController: vc)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -60,7 +68,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().backgroundImage = UIImage()
         
-        self.viewControllers = [home, search, favourite]
+        self.viewControllers = [home, search, favourite, profile]
     }
     
     override func viewWillAppear(_ animated: Bool) {
