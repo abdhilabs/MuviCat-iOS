@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		230C71FC268D7C4E0003CA2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C71FA268D7C4E0003CA2C /* ProfileViewController.swift */; };
 		230C71FF268D9A300003CA2C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C71FE268D9A300003CA2C /* ProfileView.swift */; };
-		230C7201268D9F080003CA2C /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C7200268D9F080003CA2C /* UIView+Ext.swift */; };
 		2333CE462686D9360094C085 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333CE452686D9360094C085 /* LoadingState.swift */; };
 		233C0F28267E4F5E00424122 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233C0F26267E4F5E00424122 /* SliderCollectionViewCell.swift */; };
 		233C0F29267E4F5E00424122 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233C0F27267E4F5E00424122 /* SliderCollectionViewCell.xib */; };
@@ -60,13 +59,13 @@
 		23CE9AC1267CAC9D009C46A1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23CE9ABF267CAC9D009C46A1 /* DetailViewController.xib */; };
 		23CE9AC3267CAD2B009C46A1 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */; };
 		23CE9AC5267CAD51009C46A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9AC4267CAD51009C46A1 /* String+Ext.swift */; };
+		23DD82F9268F74F000004E1F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD82F8268F74F000004E1F /* UIView+Ext.swift */; };
 		69B02F8838754B54F6110FC5 /* Pods_MuviCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75594C3B28B319BE4269821C /* Pods_MuviCat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		230C71FA268D7C4E0003CA2C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		230C71FE268D9A300003CA2C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		230C7200268D9F080003CA2C /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		2333CE452686D9360094C085 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		233C0F26267E4F5E00424122 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		233C0F27267E4F5E00424122 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +118,7 @@
 		23CE9ABF267CAC9D009C46A1 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		23CE9AC4267CAD51009C46A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		23DD82F8268F74F000004E1F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		75594C3B28B319BE4269821C /* Pods_MuviCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuviCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779FC7549DBA94CFE7E03B58 /* Pods-MuviCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.debug.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE61ADD91AC5E6E4769297C /* Pods-MuviCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.release.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,7 +403,7 @@
 				23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */,
 				23CE9AC4267CAD51009C46A1 /* String+Ext.swift */,
 				235F54F8267F258000AE1036 /* UIViewController+Ext.swift */,
-				230C7200268D9F080003CA2C /* UIView+Ext.swift */,
+				23DD82F8268F74F000004E1F /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -599,7 +599,7 @@
 				233C0F3D267EDB4300424122 /* SearchInteractor.swift in Sources */,
 				23CE9AB6267CAC1E009C46A1 /* SearchViewController.swift in Sources */,
 				23CE9A69267C489E009C46A1 /* MainViewController.swift in Sources */,
-				230C7201268D9F080003CA2C /* UIView+Ext.swift in Sources */,
+				23DD82F9268F74F000004E1F /* UIView+Ext.swift in Sources */,
 				23CE9AC0267CAC9D009C46A1 /* DetailViewController.swift in Sources */,
 				23CE9AC5267CAD51009C46A1 /* String+Ext.swift in Sources */,
 				23558EF526857E8A00EFD5C0 /* CastModel.swift in Sources */,
