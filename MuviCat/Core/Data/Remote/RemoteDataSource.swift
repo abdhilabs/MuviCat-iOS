@@ -41,7 +41,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                     .responseObject { (response: DataResponse<MovieResponse>) in
                         switch response.result {
                             case .success(let value):
-                                observer.onNext(value.results ?? Array())
+                                observer.onNext(value.results ?? [])
                                 observer.onCompleted()
                             case .failure:
                                 observer.onError(URLError.invalidResponse)
@@ -68,7 +68,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                     .responseObject { (response: DataResponse<MovieResponse>) in
                         switch response.result {
                             case .success(let value):
-                                observer.onNext(value.results ?? Array())
+                                observer.onNext(value.results ?? [])
                                 observer.onCompleted()
                             case .failure:
                                 observer.onError(URLError.invalidResponse)

@@ -14,6 +14,11 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var labelResult: UILabel!
+    @IBOutlet weak var labelError: UILabel! {
+        didSet {
+            labelError.text = "We can't find your movies popular here :("
+        }
+    }
     
     private let useCase = Injection.init().provideSearch()
     private var vm: SearchViewModel?
@@ -57,7 +62,12 @@ class SearchViewController: UIViewController {
             .drive(onNext: {[weak self] data in
                 self?.searchMovies = data
                 if !(self?.searchMovies.isEmpty ?? false) {
+                    self?.searchCollectionView.isHidden = false
                     self?.searchCollectionView.reloadData()
+                    self?.labelError.isHidden = true
+                } else {
+                    self?.searchCollectionView.isHidden = true
+                    self?.labelError.isHidden = false
                 }
             })
             .disposed(by: disposeBag)

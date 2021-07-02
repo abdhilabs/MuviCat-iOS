@@ -93,10 +93,10 @@ extension MovieRepository: MovieRepositoryProtocol {
     func searchMoviesPopular(query search: String) -> Observable<[MovieModel]> {
         return self.locale.searchPopularMovies(query: search)
             .map { MovieMapper.mapMovieEntitiesToDomains(input: $0) }
-            .filter { !$0.isEmpty }
-            .ifEmpty(switchTo: self.locale.getPopularMovies()
-                        .map { MovieMapper.mapMovieEntitiesToDomains(input: $0) }
-            )
+//            .filter { !$0.isEmpty }
+//            .ifEmpty(switchTo: self.locale.getPopularMovies()
+//                        .map { MovieMapper.mapMovieEntitiesToDomains(input: $0) }
+//            )
     }
     
     func updateFavoriteMovie(_ idMovie: Int, _ isFav: Bool) -> Observable<Bool> {
