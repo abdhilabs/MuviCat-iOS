@@ -11,7 +11,9 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     
     // MARK: - Navigation
     private lazy var home: UIViewController = {
-        let vc = HomeViewController()
+        let useCase = Injection.init().provideHome()
+        let homeViewModel = HomeViewModel(homeUseCase: useCase)
+        let vc = HomeViewController(viewModel: homeViewModel)
         let image = UIImage(systemName: "house")
         let selectedImage = UIImage(systemName: "house.fill")
         vc.tabBarItem = UITabBarItem(title: "Home", image: image, selectedImage: image)
@@ -19,7 +21,9 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     }()
     
     private lazy var search: UIViewController = {
-        let vc = SearchViewController()
+        let useCase = Injection.init().provideSearch()
+        let searchViewModel = SearchViewModel(searchUseCase: useCase)
+        let vc = SearchViewController(viewModel: searchViewModel)
         let image = UIImage(systemName: "rosette")
         let selectedImage = UIImage(systemName: "rosette")
         vc.tabBarItem = UITabBarItem(title: "Search", image: image, selectedImage: selectedImage)
@@ -27,7 +31,9 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     }()
     
     private lazy var favourite: UIViewController = {
-        let vc = FavoriteViewController()
+        let useCase = Injection.init().provideFavorite()
+        let favoriteViewModel = FavoriteViewModel(favoriteUseCase: useCase)
+        let vc = FavoriteViewController(viewModel: favoriteViewModel)
         let image = UIImage(systemName: "heart")
         let selectedImage = UIImage(systemName: "heart.fill")
         vc.tabBarItem = UITabBarItem(title: "Favorite", image: image, selectedImage: selectedImage)

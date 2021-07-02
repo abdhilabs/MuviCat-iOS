@@ -21,12 +21,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var buttonAddFavorite: UIButton!
     @IBOutlet weak var castCollectionView: UICollectionView!
     
-    private let useCase = Injection.init().provideDetail()
-    private var vm: DetailViewModel?
+    private let vm: DetailViewModel
+    
     private let disposeBag = DisposeBag()
     private var casts = [CastModel]()
     private var isFavourite = false
     var idMovie: Int?
+    
+    init(viewModel: DetailViewModel) {
+        self.vm = viewModel
+        super.init(nibName: "DetailViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLayoutSubviews() {
         scrollView.layoutIfNeeded()
@@ -42,7 +51,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm = DetailViewModel(detailUseCase: useCase)
         getData()
         setupCollectionView()
         observeMovie()
@@ -52,8 +60,8 @@ class DetailViewController: UIViewController {
     
     private func getData() {
         guard let id = idMovie else { return }
-        vm?.getMovieById(id)
-        vm?.getCastsByIdMovie(id)
+        vm.getMovieById(id)
+        vm.getCastsByIdMovie(id)
     }
     
     private func setupCollectionView() {
@@ -64,7 +72,7 @@ class DetailViewController: UIViewController {
     }
     
     private func observeMovie() {
-        vm?.movie
+        vm.movie
             .drive(onNext: {[weak self] data in
                 self?.setUI(data)
             })
@@ -72,7 +80,7 @@ class DetailViewController: UIViewController {
     }
     
     private func observeCast() {
-        vm?.cast
+        vm.cast
             .drive(onNext: {[weak self] data in
                 self?.casts = data
                 if !data.isEmpty { self?.castCollectionView?.reloadData() }
@@ -107,9 +115,9 @@ class DetailViewController: UIViewController {
     @IBAction func addToFavTapped(_ sender: Any) {
         guard let id = idMovie else { return }
         if isFavourite {
-            vm?.updateMovieById(id, false)
+            vm.updateMovieById(id, false)
         } else {
-            vm?.updateMovieById(id, true)
+            vm.updateMovieById(id, true)
         }
         isFavourite = !isFavourite
         setButtonFavourite()

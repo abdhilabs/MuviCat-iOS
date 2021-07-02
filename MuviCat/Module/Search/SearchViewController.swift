@@ -20,10 +20,19 @@ class SearchViewController: UIViewController {
         }
     }
     
-    private let useCase = Injection.init().provideSearch()
-    private var vm: SearchViewModel?
+    private let vm: SearchViewModel
+    
     private var searchMovies = [MovieModel]()
     private let disposeBag = DisposeBag()
+    
+    init(viewModel: SearchViewModel) {
+        self.vm = viewModel
+        super.init(nibName: "SearchViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -53,12 +62,11 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
-        vm = SearchViewModel(searchUseCase: useCase)
         observeMoviesSearch()
     }
     
     private func observeMoviesSearch() {
-        vm?.moviesSearch
+        vm.moviesSearch
             .drive(onNext: {[weak self] data in
                 self?.searchMovies = data
                 if !(self?.searchMovies.isEmpty ?? false) {
@@ -85,7 +93,7 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.labelResult.text = "Showing result of '\(searchText)'"
-        vm?.searchMoviesPopular(query: searchText)
+        vm.searchMoviesPopular(query: searchText)
     }
 }
 
@@ -118,7 +126,9 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        let useCase = Injection.init().provideDetail()
+        let detailViewModel = DetailViewModel(detailUseCase: useCase)
+        let detail = DetailViewController(viewModel: detailViewModel)
         let idMovie = searchMovies[indexPath.row].id
         detail.idMovie = idMovie
         self.navigationController?.pushViewController(detail, animated: true)

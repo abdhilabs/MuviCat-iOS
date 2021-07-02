@@ -14,17 +14,26 @@ class FavoriteViewController: UIViewController, FavoriteViewControllerDelegate {
     
     @IBOutlet weak var favoritetableView: UITableView!
     
-    private let useCase = Injection.init().provideFavorite()
-    private var vm: FavoriteViewModel?
+    private let vm: FavoriteViewModel
+    
     private let disposeBag = DisposeBag()
     private var favoriteMovies = [MovieModel]()
+    
+    init(viewModel: FavoriteViewModel) {
+        self.vm = viewModel
+        super.init(nibName: "FavoriteViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
         navigationController?.navigationBar.isHidden = false
         setupUI()
-        vm?.getFavoriteMovies()
+        vm.getFavoriteMovies()
     }
     
     private func setupUI() {
@@ -34,7 +43,6 @@ class FavoriteViewController: UIViewController, FavoriteViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm = FavoriteViewModel(favoriteUseCase: useCase)
         setupSearchBar()
         setupTableView()
         observeMoviesFavorite()
@@ -56,7 +64,7 @@ class FavoriteViewController: UIViewController, FavoriteViewControllerDelegate {
     }
     
     func observeMoviesFavorite() {
-        vm?.moviesFavorite
+        vm.moviesFavorite
             .drive(onNext: {[weak self] data in
                 self?.favoriteMovies = data
                 if !(self?.favoriteMovies.isEmpty ?? true) {
@@ -70,10 +78,10 @@ class FavoriteViewController: UIViewController, FavoriteViewControllerDelegate {
     }
     
     private func observeUpdateFavorite() {
-        vm?.updateFavorite
+        vm.updateFavorite
             .drive(onNext: {[weak self] state in
                 if state {
-                    self?.vm?.getFavoriteMovies()
+                    self?.vm.getFavoriteMovies()
                 }
             })
             .disposed(by: disposeBag)
@@ -82,8 +90,8 @@ class FavoriteViewController: UIViewController, FavoriteViewControllerDelegate {
 
 extension FavoriteViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty { vm?.getFavoriteMovies() }
-        else { vm?.searchFavoriteMovies(query: searchText) }
+        if searchText.isEmpty { vm.getFavoriteMovies() }
+        else { vm.searchFavoriteMovies(query: searchText) }
     }
 }
 
@@ -105,14 +113,16 @@ extension FavoriteViewController: UITableViewDataSource {
 
 extension FavoriteViewController {
     func updateFavorite(idMovie: Int) {
-        vm?.updateMovieById(idMovie, false)
+        vm.updateMovieById(idMovie, false)
     }
 }
 
 extension FavoriteViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        let useCase = Injection.init().provideDetail()
+        let detailViewModel = DetailViewModel(detailUseCase: useCase)
+        let detail = DetailViewController(viewModel: detailViewModel)
         let idMovie = favoriteMovies[indexPath.row].id
         detail.idMovie = idMovie
         self.navigationController?.pushViewController(detail, animated: true)

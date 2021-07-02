@@ -34,13 +34,22 @@ class HomeViewController: UIViewController {
         btn.tintColor = .white
         return btn
     }()
-    
-    private let useCase = Injection.init().provideHome()
-    private var vm: HomeViewModel?
+        
     private var movies = [MovieModel]()
     private var popularMovies = [MovieModel]()
     private var upcomingMovies = [MovieModel]()
     private let disposeBag = DisposeBag()
+    
+    let vm: HomeViewModel
+    
+    init(viewModel: HomeViewModel) {
+        self.vm = viewModel
+        super.init(nibName: "HomeViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private func setupUI() {
         self.view.backgroundColor = UIColor.bgColor
@@ -57,7 +66,7 @@ class HomeViewController: UIViewController {
     }
     
     private func observeMovies() {
-        vm?.moviesPopular
+        vm.moviesPopular
             .drive(onNext: {[weak self] (data) in
                 switch data {
                     case .loading:
@@ -77,7 +86,7 @@ class HomeViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        vm?.moviesUpcoming
+        vm.moviesUpcoming
             .drive(onNext: {[weak self] data in
                 switch data {
                     case .loading:
@@ -117,7 +126,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm = HomeViewModel(homeUseCase: useCase)
         setupUI()
         setupCollectionView()
         observeMovies()
@@ -207,7 +215,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        let useCase = Injection.init().provideDetail()
+        let detailViewModel = DetailViewModel(detailUseCase: useCase)
+        let detail = DetailViewController(viewModel: detailViewModel)
         if collectionView == sliderCollectionView {
             let idMovie = movies[indexPath.row].id
             detail.idMovie = idMovie
