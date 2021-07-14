@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		230C71FC268D7C4E0003CA2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C71FA268D7C4E0003CA2C /* ProfileViewController.swift */; };
 		230C71FF268D9A300003CA2C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230C71FE268D9A300003CA2C /* ProfileView.swift */; };
+		23187FB8269EB9150031590A /* Fortils in Frameworks */ = {isa = PBXBuildFile; productRef = 23187FB7269EB9150031590A /* Fortils */; };
 		2333CE462686D9360094C085 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333CE452686D9360094C085 /* LoadingState.swift */; };
 		233C0F28267E4F5E00424122 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233C0F26267E4F5E00424122 /* SliderCollectionViewCell.swift */; };
 		233C0F29267E4F5E00424122 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233C0F27267E4F5E00424122 /* SliderCollectionViewCell.xib */; };
@@ -129,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23187FB8269EB9150031590A /* Fortils in Frameworks */,
 				69B02F8838754B54F6110FC5 /* Pods_MuviCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +484,9 @@
 			dependencies = (
 			);
 			name = MuviCat;
+			packageProductDependencies = (
+				23187FB7269EB9150031590A /* Fortils */,
+			);
 			productName = MuviCat;
 			productReference = 23CE9A61267C489E009C46A1 /* MuviCat.app */;
 			productType = "com.apple.product-type.application";
@@ -509,6 +514,9 @@
 				Base,
 			);
 			mainGroup = 23CE9A58267C489E009C46A1;
+			packageReferences = (
+				23187FB6269EB9150031590A /* XCRemoteSwiftPackageReference "Fortils" */,
+			);
 			productRefGroup = 23CE9A62267C489E009C46A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -831,6 +839,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		23187FB6269EB9150031590A /* XCRemoteSwiftPackageReference "Fortils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/abdhilabs/Fortils";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23187FB7269EB9150031590A /* Fortils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23187FB6269EB9150031590A /* XCRemoteSwiftPackageReference "Fortils" */;
+			productName = Fortils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23CE9A59267C489E009C46A1 /* Project object */;
 }
