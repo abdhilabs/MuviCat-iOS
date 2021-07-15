@@ -61,8 +61,24 @@
 		23CE9AC3267CAD2B009C46A1 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */; };
 		23CE9AC5267CAD51009C46A1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9AC4267CAD51009C46A1 /* String+Ext.swift */; };
 		23DD82F9268F74F000004E1F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD82F8268F74F000004E1F /* UIView+Ext.swift */; };
+		23EF7995269EC39F008557B5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF7994269EC39F008557B5 /* Core.framework */; };
+		23EF7996269EC39F008557B5 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF7994269EC39F008557B5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69B02F8838754B54F6110FC5 /* Pods_MuviCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75594C3B28B319BE4269821C /* Pods_MuviCat.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23EF7997269EC39F008557B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				23EF7996269EC39F008557B5 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		230C71FA268D7C4E0003CA2C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +136,7 @@
 		23CE9AC2267CAD2B009C46A1 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		23CE9AC4267CAD51009C46A1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		23DD82F8268F74F000004E1F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		23EF7994269EC39F008557B5 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75594C3B28B319BE4269821C /* Pods_MuviCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuviCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779FC7549DBA94CFE7E03B58 /* Pods-MuviCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.debug.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE61ADD91AC5E6E4769297C /* Pods-MuviCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.release.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23187FB8269EB9150031590A /* Fortils in Frameworks */,
+				23EF7995269EC39F008557B5 /* Core.framework in Frameworks */,
 				69B02F8838754B54F6110FC5 /* Pods_MuviCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +479,7 @@
 		9A7201F03D9E617D76D9C7EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23EF7994269EC39F008557B5 /* Core.framework */,
 				75594C3B28B319BE4269821C /* Pods_MuviCat.framework */,
 			);
 			name = Frameworks;
@@ -478,6 +497,7 @@
 				23CE9A5E267C489E009C46A1 /* Frameworks */,
 				23CE9A5F267C489E009C46A1 /* Resources */,
 				FD14B76221F2E0D0E04E27E0 /* [CP] Embed Pods Frameworks */,
+				23EF7997269EC39F008557B5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
