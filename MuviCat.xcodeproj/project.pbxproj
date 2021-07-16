@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2316705C26A1800B003F2F62 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2316705B26A1800B003F2F62 /* MainViewController.xib */; };
-		234FB21826A021AD0080553F /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB21726A021AD0080553F /* Detail.framework */; };
-		234FB21926A021AD0080553F /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB21726A021AD0080553F /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		234FB21B26A021B60080553F /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB21A26A021B60080553F /* Favorite.framework */; };
 		234FB21C26A021B60080553F /* Favorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB21A26A021B60080553F /* Favorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		234FB21E26A021BB0080553F /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB21D26A021BB0080553F /* Home.framework */; };
@@ -37,7 +35,6 @@
 			files = (
 				234FB21C26A021B60080553F /* Favorite.framework in Embed Frameworks */,
 				23EF7996269EC39F008557B5 /* Core.framework in Embed Frameworks */,
-				234FB21926A021AD0080553F /* Detail.framework in Embed Frameworks */,
 				234FB22226A021C40080553F /* Profile.framework in Embed Frameworks */,
 				234FB22526A021C90080553F /* Search.framework in Embed Frameworks */,
 				234FB21F26A021BB0080553F /* Home.framework in Embed Frameworks */,
@@ -76,7 +73,6 @@
 				234FB22426A021C90080553F /* Search.framework in Frameworks */,
 				234FB21B26A021B60080553F /* Favorite.framework in Frameworks */,
 				23EF7995269EC39F008557B5 /* Core.framework in Frameworks */,
-				234FB21826A021AD0080553F /* Detail.framework in Frameworks */,
 				234FB21E26A021BB0080553F /* Home.framework in Frameworks */,
 				DA6B28203A51833E4768000D /* Pods_MuviCat.framework in Frameworks */,
 			);
