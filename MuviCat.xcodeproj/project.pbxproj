@@ -94,17 +94,9 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		237EF3DB26A1BBC60028F1E6 /* Reference */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reference;
-			sourceTree = "<group>";
-		};
 		23CE9A58267C489E009C46A1 = {
 			isa = PBXGroup;
 			children = (
-				237EF3DB26A1BBC60028F1E6 /* Reference */,
 				23CE9A63267C489E009C46A1 /* MuviCat */,
 				23CE9A62267C489E009C46A1 /* Products */,
 				0AB101BA97C55585900FF304 /* Pods */,
