@@ -1,4 +1,4 @@
-![platform](https://img.shields.io/badge/platform-iOS-orange?style=flat-square)
+[![Build Status](https://travis-ci.com/abdhilabs/MuviCat-iOS.svg?branch=master)](https://travis-ci.com/abdhilabs/MuviCat-iOS) ![platform](https://img.shields.io/badge/platform-iOS-orange?style=flat-square)
 
 ## MuviCat-iOS
 MuviCat-iOS is an ios-based application that displays a list of movies, can search movie what we want and storing movie as favorite on local database.
