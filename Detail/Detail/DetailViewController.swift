@@ -15,6 +15,7 @@ public class DetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var imagePoster: UIImageView!
+    @IBOutlet weak var imageIcon: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDuration: UILabel!
     @IBOutlet weak var labelGenres: UILabel!
