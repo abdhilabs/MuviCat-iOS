@@ -7,14 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2316704526A1768C003F2F62 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2316704226A1768C003F2F62 /* SearchViewController.xib */; };
+		2316704626A1768C003F2F62 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316704326A1768C003F2F62 /* SearchViewController.swift */; };
+		2316704726A1768C003F2F62 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316704426A1768C003F2F62 /* SearchViewModel.swift */; };
+		2316704B26A176A6003F2F62 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316704926A176A6003F2F62 /* SearchCollectionViewCell.swift */; };
+		2316704C26A176A6003F2F62 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2316704A26A176A6003F2F62 /* SearchCollectionViewCell.xib */; };
+		2316705F26A183AB003F2F62 /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2316705E26A183AB003F2F62 /* Detail.framework */; };
+		2316706026A183AB003F2F62 /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2316705E26A183AB003F2F62 /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		234FB1FC26A020520080553F /* Search.h in Headers */ = {isa = PBXBuildFile; fileRef = 234FB1FA26A020520080553F /* Search.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		234FB23726A0236D0080553F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB23626A0236D0080553F /* Core.framework */; };
+		234FB23826A0236D0080553F /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB23626A0236D0080553F /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3C2D9F30DD2F643234AB98C /* Pods_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCF8DD14DC973B0CE53A67D /* Pods_Search.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		234FB23926A0236D0080553F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				234FB23826A0236D0080553F /* Core.framework in Embed Frameworks */,
+				2316706026A183AB003F2F62 /* Detail.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2316704226A1768C003F2F62 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		2316704326A1768C003F2F62 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2316704426A1768C003F2F62 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2316704926A176A6003F2F62 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		2316704A26A176A6003F2F62 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		2316705E26A183AB003F2F62 /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB1F726A020520080553F /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB1FA26A020520080553F /* Search.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		234FB1FB26A020520080553F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234FB23626A0236D0080553F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B450187D4ACB818C6C93A728 /* Pods-Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.debug.xcconfig"; path = "Target Support Files/Pods-Search/Pods-Search.debug.xcconfig"; sourceTree = "<group>"; };
 		DBCF8DD14DC973B0CE53A67D /* Pods_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6490353A5315F9219EF1846 /* Pods-Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.release.xcconfig"; path = "Target Support Files/Pods-Search/Pods-Search.release.xcconfig"; sourceTree = "<group>"; };
@@ -26,12 +57,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3C2D9F30DD2F643234AB98C /* Pods_Search.framework in Frameworks */,
+				234FB23726A0236D0080553F /* Core.framework in Frameworks */,
+				2316705F26A183AB003F2F62 /* Detail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2316704826A17692003F2F62 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2316704926A176A6003F2F62 /* SearchCollectionViewCell.swift */,
+				2316704A26A176A6003F2F62 /* SearchCollectionViewCell.xib */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		234FB1ED26A020520080553F = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +95,10 @@
 		234FB1F926A020520080553F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2316704826A17692003F2F62 /* ViewCell */,
+				2316704326A1768C003F2F62 /* SearchViewController.swift */,
+				2316704226A1768C003F2F62 /* SearchViewController.xib */,
+				2316704426A1768C003F2F62 /* SearchViewModel.swift */,
 				234FB1FA26A020520080553F /* Search.h */,
 				234FB1FB26A020520080553F /* Info.plist */,
 			);
@@ -72,6 +118,8 @@
 		784C7F1F6FD3863BFA742025 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2316705E26A183AB003F2F62 /* Detail.framework */,
+				234FB23626A0236D0080553F /* Core.framework */,
 				DBCF8DD14DC973B0CE53A67D /* Pods_Search.framework */,
 			);
 			name = Frameworks;
@@ -100,6 +148,7 @@
 				234FB1F326A020520080553F /* Sources */,
 				234FB1F426A020520080553F /* Frameworks */,
 				234FB1F526A020520080553F /* Resources */,
+				234FB23926A0236D0080553F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +169,7 @@
 				TargetAttributes = {
 					234FB1F626A020520080553F = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -146,6 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2316704C26A176A6003F2F62 /* SearchCollectionViewCell.xib in Resources */,
+				2316704526A1768C003F2F62 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2316704726A1768C003F2F62 /* SearchViewModel.swift in Sources */,
+				2316704626A1768C003F2F62 /* SearchViewController.swift in Sources */,
+				2316704B26A176A6003F2F62 /* SearchCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B450187D4ACB818C6C93A728 /* Pods-Search.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -328,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdhilabs.Search;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6490353A5315F9219EF1846 /* Pods-Search.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

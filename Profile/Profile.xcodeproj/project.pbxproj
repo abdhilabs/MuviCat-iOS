@@ -8,15 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		1F7146E6EEA5702C13F84AC7 /* Pods_Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C8416B00906FAA58C0D7BF /* Pods_Profile.framework */; };
+		2316704026A175E2003F2F62 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316703E26A175E2003F2F62 /* ProfileViewController.swift */; };
+		2316704126A175E2003F2F62 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316703F26A175E2003F2F62 /* ProfileView.swift */; };
 		234FB1E726A0203C0080553F /* Profile.h in Headers */ = {isa = PBXBuildFile; fileRef = 234FB1E526A0203C0080553F /* Profile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		234FB23326A023650080553F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB23226A023650080553F /* Core.framework */; };
+		234FB23426A023650080553F /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB23226A023650080553F /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		234FB23526A023650080553F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				234FB23426A023650080553F /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A5233C0389B14F9C26B5403 /* Pods-Profile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profile.release.xcconfig"; path = "Target Support Files/Pods-Profile/Pods-Profile.release.xcconfig"; sourceTree = "<group>"; };
 		22C8416B00906FAA58C0D7BF /* Pods_Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2316703E26A175E2003F2F62 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2316703F26A175E2003F2F62 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		234ABC7526A1919900A9B0CB /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB1E226A0203C0080553F /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB1E526A0203C0080553F /* Profile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		234FB1E626A0203C0080553F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234FB23226A023650080553F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4190B6630D956BF2E2978 /* Pods-Profile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profile.debug.xcconfig"; path = "Target Support Files/Pods-Profile/Pods-Profile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -26,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7146E6EEA5702C13F84AC7 /* Pods_Profile.framework in Frameworks */,
+				234FB23326A023650080553F /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +76,8 @@
 		234FB1E426A0203C0080553F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2316703F26A175E2003F2F62 /* ProfileView.swift */,
+				2316703E26A175E2003F2F62 /* ProfileViewController.swift */,
 				234FB1E526A0203C0080553F /* Profile.h */,
 				234FB1E626A0203C0080553F /* Info.plist */,
 			);
@@ -62,6 +87,8 @@
 		25600997420826A98127D2D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				234ABC7526A1919900A9B0CB /* SDWebImage.framework */,
+				234FB23226A023650080553F /* Core.framework */,
 				22C8416B00906FAA58C0D7BF /* Pods_Profile.framework */,
 			);
 			name = Frameworks;
@@ -100,6 +127,7 @@
 				234FB1DE26A0203C0080553F /* Sources */,
 				234FB1DF26A0203C0080553F /* Frameworks */,
 				234FB1E026A0203C0080553F /* Resources */,
+				234FB23526A023650080553F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +148,7 @@
 				TargetAttributes = {
 					234FB1E126A0203C0080553F = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -181,6 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2316704126A175E2003F2F62 /* ProfileView.swift in Sources */,
+				2316704026A175E2003F2F62 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8C4190B6630D956BF2E2978 /* Pods-Profile.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -328,6 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdhilabs.Profile;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A5233C0389B14F9C26B5403 /* Pods-Profile.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

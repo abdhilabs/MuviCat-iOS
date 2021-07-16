@@ -7,14 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2316705126A176E2003F2F62 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316704D26A176E2003F2F62 /* FavoriteViewController.swift */; };
+		2316705226A176E2003F2F62 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316704E26A176E2003F2F62 /* FavoriteViewModel.swift */; };
+		2316705426A176E2003F2F62 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2316705026A176E2003F2F62 /* FavoriteViewController.xib */; };
+		2316705926A17748003F2F62 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316705726A17748003F2F62 /* FavoriteTableViewCell.swift */; };
+		2316705A26A17748003F2F62 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2316705826A17748003F2F62 /* FavoriteTableViewCell.xib */; };
+		2316706826A18DF9003F2F62 /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2316706726A18DF9003F2F62 /* Detail.framework */; };
+		2316706926A18DF9003F2F62 /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2316706726A18DF9003F2F62 /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		234FB1D226A0200C0080553F /* Favorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 234FB1D026A0200C0080553F /* Favorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		234FB22B26A023540080553F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB22A26A023540080553F /* Core.framework */; };
+		234FB22C26A023540080553F /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB22A26A023540080553F /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36C9FE4975C96CADF8AD0937 /* Pods_Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345B8B3F1616DB0FFBF2A323 /* Pods_Favorite.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		234FB22D26A023540080553F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				234FB22C26A023540080553F /* Core.framework in Embed Frameworks */,
+				2316706926A18DF9003F2F62 /* Detail.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2316704D26A176E2003F2F62 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		2316704E26A176E2003F2F62 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		2316705026A176E2003F2F62 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		2316705726A17748003F2F62 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		2316705826A17748003F2F62 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		2316706726A18DF9003F2F62 /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB1CD26A0200C0080553F /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB1D026A0200C0080553F /* Favorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		234FB1D126A0200C0080553F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234FB22A26A023540080553F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345B8B3F1616DB0FFBF2A323 /* Pods_Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DDF9F769C420BB0877A012E /* Pods-Favorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.release.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.release.xcconfig"; sourceTree = "<group>"; };
 		AE4130D848F28FF57EB306F1 /* Pods-Favorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.debug.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -26,12 +57,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				36C9FE4975C96CADF8AD0937 /* Pods_Favorite.framework in Frameworks */,
+				234FB22B26A023540080553F /* Core.framework in Frameworks */,
+				2316706826A18DF9003F2F62 /* Detail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2316705626A1773E003F2F62 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2316705726A17748003F2F62 /* FavoriteTableViewCell.swift */,
+				2316705826A17748003F2F62 /* FavoriteTableViewCell.xib */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		234FB1C326A0200C0080553F = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +95,10 @@
 		234FB1CF26A0200C0080553F /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				2316705626A1773E003F2F62 /* ViewCell */,
+				2316704D26A176E2003F2F62 /* FavoriteViewController.swift */,
+				2316705026A176E2003F2F62 /* FavoriteViewController.xib */,
+				2316704E26A176E2003F2F62 /* FavoriteViewModel.swift */,
 				234FB1D026A0200C0080553F /* Favorite.h */,
 				234FB1D126A0200C0080553F /* Info.plist */,
 			);
@@ -72,6 +118,8 @@
 		E901C52A32A55742C7CBAED4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2316706726A18DF9003F2F62 /* Detail.framework */,
+				234FB22A26A023540080553F /* Core.framework */,
 				345B8B3F1616DB0FFBF2A323 /* Pods_Favorite.framework */,
 			);
 			name = Frameworks;
@@ -100,6 +148,7 @@
 				234FB1C926A0200C0080553F /* Sources */,
 				234FB1CA26A0200C0080553F /* Frameworks */,
 				234FB1CB26A0200C0080553F /* Resources */,
+				234FB22D26A023540080553F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +169,7 @@
 				TargetAttributes = {
 					234FB1CC26A0200C0080553F = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -146,6 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2316705426A176E2003F2F62 /* FavoriteViewController.xib in Resources */,
+				2316705A26A17748003F2F62 /* FavoriteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2316705226A176E2003F2F62 /* FavoriteViewModel.swift in Sources */,
+				2316705926A17748003F2F62 /* FavoriteTableViewCell.swift in Sources */,
+				2316705126A176E2003F2F62 /* FavoriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE4130D848F28FF57EB306F1 /* Pods-Favorite.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -328,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdhilabs.Favorite;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DDF9F769C420BB0877A012E /* Pods-Favorite.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
