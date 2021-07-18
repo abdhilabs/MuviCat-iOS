@@ -1,7 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-source 'https://github.com/CocoaPods/Specs.git'
 source "https://github.com/abdhilabs/FortilsPodSpecs"
 
 use_frameworks!
@@ -11,7 +10,7 @@ target 'MuviCat' do
   # Comment the next line if you don't want to use dynamic frameworks
 
   # Pods for MuviCat
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.7'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RealmSwift'
@@ -24,7 +23,7 @@ end
 target 'Core' do
 project '../MuviCat-iOS/Core/Core'
 
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.7'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RealmSwift'

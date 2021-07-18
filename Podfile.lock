@@ -21,7 +21,7 @@ PODS:
   - SDWebImage/Core (5.11.1)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.7)
   - AlamofireObjectMapper (~> 5.2)
   - Fortils
   - RealmSwift
@@ -55,6 +55,6 @@ SPEC CHECKSUMS:
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 4c296a930b31cc22a4fac94233d3d2506c36b89e
+PODFILE CHECKSUM: 4864de5c8126e2c1c1eb29f1d4ac9b9d186d10be
 
 COCOAPODS: 1.10.1
