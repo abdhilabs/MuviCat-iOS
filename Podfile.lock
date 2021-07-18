@@ -4,7 +4,6 @@ PODS:
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
   - Fortils (0.0.4)
-  - IQKeyboardManagerSwift (6.5.6)
   - ObjectMapper (3.5.3)
   - Realm (10.8.0):
     - Realm/Headers (= 10.8.0)
@@ -25,7 +24,6 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper (~> 5.2)
   - Fortils
-  - IQKeyboardManagerSwift
   - RealmSwift
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -37,7 +35,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireObjectMapper
-    - IQKeyboardManagerSwift
     - ObjectMapper
     - Realm
     - RealmSwift
@@ -50,7 +47,6 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   Fortils: 37e18118ad202e3653a09d22e6177912126afa5a
-  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   Realm: ad3c5cd762e5a5bc02080fc55aa04a0e43f98575
   RealmSwift: 316e450478fb01e06ece4438dda42f407c5f51d2
@@ -59,6 +55,6 @@ SPEC CHECKSUMS:
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 45c6fdb8b622a213685e31e5130833f2f76a4a73
+PODFILE CHECKSUM: 4c296a930b31cc22a4fac94233d3d2506c36b89e
 
 COCOAPODS: 1.10.1

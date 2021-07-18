@@ -10,7 +10,6 @@ target 'MuviCat' do
   # Comment the next line if you don't want to use dynamic frameworks
 
   # Pods for MuviCat
-  pod 'IQKeyboardManagerSwift'
   pod 'Alamofire'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
