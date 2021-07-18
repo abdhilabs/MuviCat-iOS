@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B8823B02D5D9085EFBE619 /* Pods_MuviCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451EDA4A3D5A2D23CB320A74 /* Pods_MuviCat.framework */; };
 		2316705C26A1800B003F2F62 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2316705B26A1800B003F2F62 /* MainViewController.xib */; };
 		234FB21B26A021B60080553F /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB21A26A021B60080553F /* Favorite.framework */; };
 		234FB21C26A021B60080553F /* Favorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB21A26A021B60080553F /* Favorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -16,6 +17,7 @@
 		234FB22226A021C40080553F /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB22026A021C40080553F /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		234FB22426A021C90080553F /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB22326A021C90080553F /* Search.framework */; };
 		234FB22526A021C90080553F /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB22326A021C90080553F /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		238A393726A4884300844EF3 /* MuviCatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A393626A4884300844EF3 /* MuviCatTests.swift */; };
 		23CE9A65267C489E009C46A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9A64267C489E009C46A1 /* AppDelegate.swift */; };
 		23CE9A67267C489E009C46A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9A66267C489E009C46A1 /* SceneDelegate.swift */; };
 		23CE9A69267C489E009C46A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9A68267C489E009C46A1 /* MainViewController.swift */; };
@@ -23,8 +25,17 @@
 		23CE9A74267C48A1009C46A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CE9A72267C48A1009C46A1 /* LaunchScreen.storyboard */; };
 		23EF7995269EC39F008557B5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF7994269EC39F008557B5 /* Core.framework */; };
 		23EF7996269EC39F008557B5 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF7994269EC39F008557B5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DA6B28203A51833E4768000D /* Pods_MuviCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8CE3A7F472CADC36D3CD32 /* Pods_MuviCat.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		238A393926A4884300844EF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23CE9A59267C489E009C46A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CE9A60267C489E009C46A1;
+			remoteInfo = MuviCat;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		23EF7997269EC39F008557B5 /* Embed Frameworks */ = {
@@ -45,14 +56,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F5F699F85C6AD9E7518E81A /* Pods-MuviCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.debug.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.debug.xcconfig"; sourceTree = "<group>"; };
-		1A8CE3A7F472CADC36D3CD32 /* Pods_MuviCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuviCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2316705B26A1800B003F2F62 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		234FB21726A021AD0080553F /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB21A26A021B60080553F /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB21D26A021BB0080553F /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB22026A021C40080553F /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FB22326A021C90080553F /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238A393426A4884300844EF3 /* MuviCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuviCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		238A393626A4884300844EF3 /* MuviCatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuviCatTests.swift; sourceTree = "<group>"; };
+		238A393826A4884300844EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23CE9A61267C489E009C46A1 /* MuviCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuviCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CE9A64267C489E009C46A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23CE9A66267C489E009C46A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +73,19 @@
 		23CE9A73267C48A1009C46A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23CE9A75267C48A1009C46A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23EF7994269EC39F008557B5 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DB1CE5471CA0DBECAD6E0E1 /* Pods-MuviCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.release.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.release.xcconfig"; sourceTree = "<group>"; };
+		40042585FFB1829EAFFEA42C /* Pods-MuviCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.debug.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.debug.xcconfig"; sourceTree = "<group>"; };
+		451EDA4A3D5A2D23CB320A74 /* Pods_MuviCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuviCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABB4910EF82C2583B3B5D6C /* Pods-MuviCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuviCat.release.xcconfig"; path = "Target Support Files/Pods-MuviCat/Pods-MuviCat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		238A393126A4884300844EF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23CE9A5E267C489E009C46A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,7 +95,7 @@
 				234FB21B26A021B60080553F /* Favorite.framework in Frameworks */,
 				23EF7995269EC39F008557B5 /* Core.framework in Frameworks */,
 				234FB21E26A021BB0080553F /* Home.framework in Frameworks */,
-				DA6B28203A51833E4768000D /* Pods_MuviCat.framework in Frameworks */,
+				06B8823B02D5D9085EFBE619 /* Pods_MuviCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +105,26 @@
 		0AB101BA97C55585900FF304 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0F5F699F85C6AD9E7518E81A /* Pods-MuviCat.debug.xcconfig */,
-				3DB1CE5471CA0DBECAD6E0E1 /* Pods-MuviCat.release.xcconfig */,
+				40042585FFB1829EAFFEA42C /* Pods-MuviCat.debug.xcconfig */,
+				DABB4910EF82C2583B3B5D6C /* Pods-MuviCat.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		238A393526A4884300844EF3 /* MuviCatTests */ = {
+			isa = PBXGroup;
+			children = (
+				238A393626A4884300844EF3 /* MuviCatTests.swift */,
+				238A393826A4884300844EF3 /* Info.plist */,
+			);
+			path = MuviCatTests;
 			sourceTree = "<group>";
 		};
 		23CE9A58267C489E009C46A1 = {
 			isa = PBXGroup;
 			children = (
 				23CE9A63267C489E009C46A1 /* MuviCat */,
+				238A393526A4884300844EF3 /* MuviCatTests */,
 				23CE9A62267C489E009C46A1 /* Products */,
 				0AB101BA97C55585900FF304 /* Pods */,
 				9A7201F03D9E617D76D9C7EE /* Frameworks */,
@@ -104,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				23CE9A61267C489E009C46A1 /* MuviCat.app */,
+				238A393426A4884300844EF3 /* MuviCatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,7 +179,7 @@
 				234FB21A26A021B60080553F /* Favorite.framework */,
 				234FB21726A021AD0080553F /* Detail.framework */,
 				23EF7994269EC39F008557B5 /* Core.framework */,
-				1A8CE3A7F472CADC36D3CD32 /* Pods_MuviCat.framework */,
+				451EDA4A3D5A2D23CB320A74 /* Pods_MuviCat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,16 +187,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		238A393326A4884300844EF3 /* MuviCatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238A393B26A4884300844EF3 /* Build configuration list for PBXNativeTarget "MuviCatTests" */;
+			buildPhases = (
+				238A393026A4884300844EF3 /* Sources */,
+				238A393126A4884300844EF3 /* Frameworks */,
+				238A393226A4884300844EF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238A393A26A4884300844EF3 /* PBXTargetDependency */,
+			);
+			name = MuviCatTests;
+			productName = MuviCatTests;
+			productReference = 238A393426A4884300844EF3 /* MuviCatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		23CE9A60267C489E009C46A1 /* MuviCat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23CE9A78267C48A1009C46A1 /* Build configuration list for PBXNativeTarget "MuviCat" */;
 			buildPhases = (
-				9302829369BCBD6B8FA040C5 /* [CP] Check Pods Manifest.lock */,
+				C3C06272038B9F68A9580059 /* [CP] Check Pods Manifest.lock */,
 				23CE9A5D267C489E009C46A1 /* Sources */,
 				23CE9A5E267C489E009C46A1 /* Frameworks */,
 				23CE9A5F267C489E009C46A1 /* Resources */,
 				23EF7997269EC39F008557B5 /* Embed Frameworks */,
-				0C773B0686808015395DF89B /* [CP] Embed Pods Frameworks */,
+				5A95187389881328C29D9FCF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +234,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					238A393326A4884300844EF3 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 23CE9A60267C489E009C46A1;
+					};
 					23CE9A60267C489E009C46A1 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -203,11 +257,19 @@
 			projectRoot = "";
 			targets = (
 				23CE9A60267C489E009C46A1 /* MuviCat */,
+				238A393326A4884300844EF3 /* MuviCatTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		238A393226A4884300844EF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23CE9A5F267C489E009C46A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,7 +283,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C773B0686808015395DF89B /* [CP] Embed Pods Frameworks */ = {
+		5A95187389881328C29D9FCF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,7 +300,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuviCat/Pods-MuviCat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9302829369BCBD6B8FA040C5 /* [CP] Check Pods Manifest.lock */ = {
+		C3C06272038B9F68A9580059 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,6 +325,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		238A393026A4884300844EF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A393726A4884300844EF3 /* MuviCatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23CE9A5D267C489E009C46A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +344,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		238A393A26A4884300844EF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23CE9A60267C489E009C46A1 /* MuviCat */;
+			targetProxy = 238A393926A4884300844EF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		23CE9A72267C48A1009C46A1 /* LaunchScreen.storyboard */ = {
@@ -287,6 +365,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		238A393C26A4884300844EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H53AFJYM7;
+				INFOPLIST_FILE = MuviCatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdhilabs.MuviCatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuviCat.app/MuviCat";
+			};
+			name = Debug;
+		};
+		238A393D26A4884300844EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H53AFJYM7;
+				INFOPLIST_FILE = MuviCatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdhilabs.MuviCatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuviCat.app/MuviCat";
+			};
+			name = Release;
+		};
 		23CE9A76267C48A1009C46A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -405,7 +523,7 @@
 		};
 		23CE9A79267C48A1009C46A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F5F699F85C6AD9E7518E81A /* Pods-MuviCat.debug.xcconfig */;
+			baseConfigurationReference = 40042585FFB1829EAFFEA42C /* Pods-MuviCat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -425,7 +543,7 @@
 		};
 		23CE9A7A267C48A1009C46A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DB1CE5471CA0DBECAD6E0E1 /* Pods-MuviCat.release.xcconfig */;
+			baseConfigurationReference = DABB4910EF82C2583B3B5D6C /* Pods-MuviCat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,6 +564,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		238A393B26A4884300844EF3 /* Build configuration list for PBXNativeTarget "MuviCatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238A393C26A4884300844EF3 /* Debug */,
+				238A393D26A4884300844EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		23CE9A5C267C489E009C46A1 /* Build configuration list for PBXProject "MuviCat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
