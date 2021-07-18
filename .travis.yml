@@ -11,3 +11,6 @@ xcode_destination: platform=iOS Simulator,OS=14.5,name=iPhone 11 Pro
 
 script:
     xctool -workspace MuviCat.xcworkspace -scheme MuviCat build -sdk iphonesimulator
+
+notifications:
+  email: false
