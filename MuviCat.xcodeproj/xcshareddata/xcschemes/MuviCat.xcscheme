@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "23D427CC26A4856A00B8E1EA"
+               BlueprintIdentifier = "238A393326A4884300844EF3"
                BuildableName = "MuviCatTests.xctest"
                BlueprintName = "MuviCatTests"
+               ReferencedContainer = "container:MuviCat.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "238A394126A489FA00844EF3"
+               BuildableName = "MuviCatUITests.xctest"
+               BlueprintName = "MuviCatUITests"
                ReferencedContainer = "container:MuviCat.xcodeproj">
             </BuildableReference>
          </TestableReference>

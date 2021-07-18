@@ -18,6 +18,7 @@
 		234FB22426A021C90080553F /* Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB22326A021C90080553F /* Search.framework */; };
 		234FB22526A021C90080553F /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 234FB22326A021C90080553F /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		238A393726A4884300844EF3 /* MuviCatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A393626A4884300844EF3 /* MuviCatTests.swift */; };
+		238A394526A489FA00844EF3 /* MuviCatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A394426A489FA00844EF3 /* MuviCatUITests.swift */; };
 		23CE9A65267C489E009C46A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9A64267C489E009C46A1 /* AppDelegate.swift */; };
 		23CE9A67267C489E009C46A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9A66267C489E009C46A1 /* SceneDelegate.swift */; };
 		23CE9A69267C489E009C46A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE9A68267C489E009C46A1 /* MainViewController.swift */; };
@@ -29,6 +30,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		238A393926A4884300844EF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23CE9A59267C489E009C46A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CE9A60267C489E009C46A1;
+			remoteInfo = MuviCat;
+		};
+		238A394726A489FA00844EF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 23CE9A59267C489E009C46A1 /* Project object */;
 			proxyType = 1;
@@ -65,6 +73,9 @@
 		238A393426A4884300844EF3 /* MuviCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuviCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		238A393626A4884300844EF3 /* MuviCatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuviCatTests.swift; sourceTree = "<group>"; };
 		238A393826A4884300844EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238A394226A489FA00844EF3 /* MuviCatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuviCatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		238A394426A489FA00844EF3 /* MuviCatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuviCatUITests.swift; sourceTree = "<group>"; };
+		238A394626A489FA00844EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23CE9A61267C489E009C46A1 /* MuviCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuviCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CE9A64267C489E009C46A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23CE9A66267C489E009C46A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +91,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		238A393126A4884300844EF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238A393F26A489FA00844EF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -120,11 +138,21 @@
 			path = MuviCatTests;
 			sourceTree = "<group>";
 		};
+		238A394326A489FA00844EF3 /* MuviCatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				238A394426A489FA00844EF3 /* MuviCatUITests.swift */,
+				238A394626A489FA00844EF3 /* Info.plist */,
+			);
+			path = MuviCatUITests;
+			sourceTree = "<group>";
+		};
 		23CE9A58267C489E009C46A1 = {
 			isa = PBXGroup;
 			children = (
 				23CE9A63267C489E009C46A1 /* MuviCat */,
 				238A393526A4884300844EF3 /* MuviCatTests */,
+				238A394326A489FA00844EF3 /* MuviCatUITests */,
 				23CE9A62267C489E009C46A1 /* Products */,
 				0AB101BA97C55585900FF304 /* Pods */,
 				9A7201F03D9E617D76D9C7EE /* Frameworks */,
@@ -136,6 +164,7 @@
 			children = (
 				23CE9A61267C489E009C46A1 /* MuviCat.app */,
 				238A393426A4884300844EF3 /* MuviCatTests.xctest */,
+				238A394226A489FA00844EF3 /* MuviCatUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +234,24 @@
 			productReference = 238A393426A4884300844EF3 /* MuviCatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		238A394126A489FA00844EF3 /* MuviCatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238A394B26A489FA00844EF3 /* Build configuration list for PBXNativeTarget "MuviCatUITests" */;
+			buildPhases = (
+				238A393E26A489FA00844EF3 /* Sources */,
+				238A393F26A489FA00844EF3 /* Frameworks */,
+				238A394026A489FA00844EF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238A394826A489FA00844EF3 /* PBXTargetDependency */,
+			);
+			name = MuviCatUITests;
+			productName = MuviCatUITests;
+			productReference = 238A394226A489FA00844EF3 /* MuviCatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		23CE9A60267C489E009C46A1 /* MuviCat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23CE9A78267C48A1009C46A1 /* Build configuration list for PBXNativeTarget "MuviCat" */;
@@ -238,6 +285,10 @@
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 23CE9A60267C489E009C46A1;
 					};
+					238A394126A489FA00844EF3 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 23CE9A60267C489E009C46A1;
+					};
 					23CE9A60267C489E009C46A1 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -258,12 +309,20 @@
 			targets = (
 				23CE9A60267C489E009C46A1 /* MuviCat */,
 				238A393326A4884300844EF3 /* MuviCatTests */,
+				238A394126A489FA00844EF3 /* MuviCatUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		238A393226A4884300844EF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238A394026A489FA00844EF3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,6 +392,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		238A393E26A489FA00844EF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A394526A489FA00844EF3 /* MuviCatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23CE9A5D267C489E009C46A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +417,11 @@
 			isa = PBXTargetDependency;
 			target = 23CE9A60267C489E009C46A1 /* MuviCat */;
 			targetProxy = 238A393926A4884300844EF3 /* PBXContainerItemProxy */;
+		};
+		238A394826A489FA00844EF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23CE9A60267C489E009C46A1 /* MuviCat */;
+			targetProxy = 238A394726A489FA00844EF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -402,6 +474,44 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuviCat.app/MuviCat";
+			};
+			name = Release;
+		};
+		238A394926A489FA00844EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H53AFJYM7;
+				INFOPLIST_FILE = MuviCatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdhilabs.MuviCatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuviCat;
+			};
+			name = Debug;
+		};
+		238A394A26A489FA00844EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H53AFJYM7;
+				INFOPLIST_FILE = MuviCatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdhilabs.MuviCatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuviCat;
 			};
 			name = Release;
 		};
@@ -569,6 +679,15 @@
 			buildConfigurations = (
 				238A393C26A4884300844EF3 /* Debug */,
 				238A393D26A4884300844EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238A394B26A489FA00844EF3 /* Build configuration list for PBXNativeTarget "MuviCatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238A394926A489FA00844EF3 /* Debug */,
+				238A394A26A489FA00844EF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
