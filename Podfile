@@ -10,7 +10,7 @@ target 'MuviCat' do
   # Comment the next line if you don't want to use dynamic frameworks
 
   # Pods for MuviCat
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RealmSwift'
@@ -23,7 +23,7 @@ end
 target 'Core' do
 project '../MuviCat-iOS/Core/Core'
 
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RealmSwift'
