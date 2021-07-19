@@ -1,6 +1,6 @@
 language: swift
 osx_image: xcode12.5
-xcode_project: MuviCat.xcodeproj
+xcode_workspace: MuviCat.xcworkspace
 xcode_scheme: MuviCat
 xcode_destination: platform=iOS Simulator,OS=14.5,name=iPhone 11 Pro
 notifications:
