@@ -1,18 +1,19 @@
 //
-//  HomeCollectionViewCell.swift
-//  MuviCat
+//  UpcomingItemCollectionViewCell.swift
+//  Home
 //
-//  Created by Abdhi on 20/06/21.
+//  Created by Abdhi on 23/07/21.
 //
 
-import UIKit
 import Core
+import UIKit
+import SDWebImage
 import Reusable
 
-class HomeCollectionViewCell: UICollectionViewCell, NibReusable {
+class UpcomingItemCollectionViewCell: UICollectionViewCell, NibReusable {
 
   @IBOutlet weak var imagePoster: UIImageView!
-
+  
   var movie: MovieModel? {
     didSet {
       setContent()
