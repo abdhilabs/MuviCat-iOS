@@ -17,6 +17,7 @@ target 'MuviCat' do
   pod 'RealmSwift'
   pod 'AlamofireObjectMapper', '~> 5.2'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Reusable'
   pod 'Fortils'
 
 end
@@ -39,6 +40,7 @@ project '../MuviCat-iOS/Home/Home'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Reusable'
   pod 'Fortils'
 
 end

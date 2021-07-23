@@ -10,6 +10,11 @@ PODS:
   - Realm/Headers (10.8.0)
   - RealmSwift (10.8.0):
     - Realm (= 10.8.0)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -25,6 +30,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 5.2)
   - Fortils
   - RealmSwift
+  - Reusable
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SDWebImage (~> 5.0)
@@ -38,6 +44,7 @@ SPEC REPOS:
     - ObjectMapper
     - Realm
     - RealmSwift
+    - Reusable
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -50,11 +57,12 @@ SPEC CHECKSUMS:
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   Realm: ad3c5cd762e5a5bc02080fc55aa04a0e43f98575
   RealmSwift: 316e450478fb01e06ece4438dda42f407c5f51d2
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 85a485f956e44507e51d38d6fb53bceffa5c9318
+PODFILE CHECKSUM: e92efa9af3b3e905cfcfebbe89099d53293f2499
 
 COCOAPODS: 1.10.1

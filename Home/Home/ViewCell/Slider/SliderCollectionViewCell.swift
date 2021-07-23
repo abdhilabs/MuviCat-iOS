@@ -8,13 +8,21 @@
 import UIKit
 import SDWebImage
 import Core
+import Reusable
 
-class SliderCollectionViewCell: UICollectionViewCell {
+class SliderCollectionViewCell: UICollectionViewCell, NibReusable {
 
-    @IBOutlet weak var imageBannerMovie: UIImageView!
-    
-    func setCellWithValuesOf(_ movie: MovieModel) {
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.backdropPath)")
-        self.imageBannerMovie.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholdertext.fill"))
+  @IBOutlet weak var imageBannerMovie: UIImageView!
+
+  var movie: MovieModel? {
+    didSet {
+      setContent()
     }
+  }
+
+  private func setContent() {
+    guard let movie = movie else { return }
+    let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.backdropPath)")
+    self.imageBannerMovie.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholdertext.fill"))
+  }
 }
