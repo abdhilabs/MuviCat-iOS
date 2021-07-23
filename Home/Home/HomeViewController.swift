@@ -146,8 +146,8 @@ public class HomeViewController: UIViewController {
     upcomingCollectionView.delegate = self
 
     sliderCollectionView.register(cellType: SliderCollectionViewCell.self)
-    popularCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: Bundle(for: HomeCollectionViewCell.self)), forCellWithReuseIdentifier: "HomeCell")
-    upcomingCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: Bundle(for: HomeCollectionViewCell.self)), forCellWithReuseIdentifier: "HomeCell")
+    popularCollectionView.register(cellType: HomeCollectionViewCell.self)
+    upcomingCollectionView.register(cellType: HomeCollectionViewCell.self)
   }
 }
 
@@ -169,16 +169,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
       sliderCell.movie = movie
       return sliderCell
     } else if collectionView == popularCollectionView {
-      guard let homeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as? HomeCollectionViewCell else { fatalError("DequeueReusableCell failed while casting")
-      }
+      let homeCell: HomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
       let movie = popularMovies[indexPath.row]
-      homeCell.setCellWithValuesOf(movie)
+      homeCell.movie = movie
       return homeCell
     } else if collectionView == upcomingCollectionView {
-      guard let homeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as? HomeCollectionViewCell else { fatalError("DequeueReusableCell failed while casting")
-      }
+      let homeCell: HomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
       let movie = upcomingMovies[indexPath.row]
-      homeCell.setCellWithValuesOf(movie)
+      homeCell.movie = movie
       return homeCell
     }
     return UICollectionViewCell()
