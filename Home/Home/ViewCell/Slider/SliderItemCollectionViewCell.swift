@@ -10,7 +10,7 @@ import SDWebImage
 import Core
 import Reusable
 
-class SliderCollectionViewCell: UICollectionViewCell, NibReusable {
+class SliderItemCollectionViewCell: UICollectionViewCell, NibReusable {
 
   @IBOutlet weak var imageBannerMovie: UIImageView!
 

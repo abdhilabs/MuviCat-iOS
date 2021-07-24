@@ -13,14 +13,7 @@ import Fortils
 
 public class HomeViewController: UIViewController {
 
-  @IBOutlet weak var sliderCollectionView: UICollectionView!
-  @IBOutlet weak var popularCollectionView: UICollectionView!
-  @IBOutlet weak var upcomingCollectionView: UICollectionView!
-  @IBOutlet weak var scrollView: UIScrollView!
-  @IBOutlet weak var contentView: UIView!
-  @IBOutlet weak var loadingSlider: UIActivityIndicatorView!
-  @IBOutlet weak var loadingPopular: UIActivityIndicatorView!
-  @IBOutlet weak var loadingUpcoming: UIActivityIndicatorView!
+  @IBOutlet weak var homeTableView: UITableView!
 
   private lazy var logoIcon: [UIBarButtonItem] = {
     let logoImage = UIImage.init(named: "logoMuvi")
@@ -55,6 +48,21 @@ public class HomeViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
 
+  enum HomeSection {
+    case slider
+    case popular
+    case upcoming
+  }
+
+  var sections: [HomeSection] = [.slider, .popular, .upcoming]
+
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    setupUI()
+    setupViews()
+    observeMovies()
+  }
+
   private func setupUI() {
     self.view.backgroundColor = UIColor.bgColor
     self.navigationController?.navigationBar.barTintColor = UIColor.black
@@ -73,15 +81,15 @@ public class HomeViewController: UIViewController {
     vm.moviesPopular
       .drive(onNext: {[weak self] (data) in
         switch data {
-          case .loading:
-            self?.loadingSlider.startAnimating()
-            self?.loadingPopular.startAnimating()
+          case .loading: break
+          //            self?.loadingSlider.startAnimating()
+          //            self?.loadingPopular.startAnimating()
           case .success(let result):
             self?.hideProgressViewPopular()
             self?.movies = result
             self?.popularMovies = result
-            self?.sliderCollectionView.reloadData()
-            self?.popularCollectionView.reloadData()
+          //            self?.sliderCollectionView.reloadData()
+          //            self?.popularCollectionView.reloadData()
           case .failure(let msg):
             print("Error: \(msg)")
           default:
@@ -93,12 +101,14 @@ public class HomeViewController: UIViewController {
     vm.moviesUpcoming
       .drive(onNext: {[weak self] data in
         switch data {
-          case .loading:
-            self?.loadingUpcoming.startAnimating()
+          case .loading: break
+          //            self?.loadingUpcoming.startAnimating()
           case .success(let result):
+            print("Jumlah Data Bersih: \(result.count)")
             self?.upcomingMovies = result
-            self?.upcomingCollectionView.reloadData()
+            //            self?.upcomingCollectionView.reloadData()
             self?.hideProgressViewUpcoming()
+            self?.homeTableView.reloadData()
           case .failure(let msg):
             self?.hideProgressViewUpcoming()
             print("Error: \(msg)")
@@ -110,120 +120,92 @@ public class HomeViewController: UIViewController {
   }
 
   private func hideProgressViewPopular() {
-    self.loadingSlider.stopAnimating()
-    self.loadingSlider.hidesWhenStopped = true
-    self.loadingPopular.stopAnimating()
-    self.loadingPopular.hidesWhenStopped = true
+    //    self.loadingSlider.stopAnimating()
+    //    self.loadingSlider.hidesWhenStopped = true
+    //    self.loadingPopular.stopAnimating()
+    //    self.loadingPopular.hidesWhenStopped = true
   }
 
   private func hideProgressViewUpcoming() {
-    self.loadingUpcoming.stopAnimating()
-    self.loadingUpcoming.hidesWhenStopped = true
+    //    self.loadingUpcoming.stopAnimating()
+    //    self.loadingUpcoming.hidesWhenStopped = true
   }
 
-  public override func viewDidLayoutSubviews() {
-    scrollView.layoutIfNeeded()
-    scrollView.isScrollEnabled = true
-    scrollView.showsVerticalScrollIndicator = false
-    scrollView.contentSize = CGSize(width: self.scrollView.contentSize.width, height: self.contentView.frame.size.height)
-  }
+  private func setupViews() {
+    homeTableView.delegate = self
+    homeTableView.dataSource = self
 
-  public override func viewDidLoad() {
-    super.viewDidLoad()
-    setupUI()
-    setupCollectionView()
-    observeMovies()
-  }
-
-  private func setupCollectionView() {
-    sliderCollectionView.dataSource = self
-    sliderCollectionView.delegate = self
-
-    popularCollectionView.dataSource = self
-    popularCollectionView.delegate = self
-
-    upcomingCollectionView.dataSource = self
-    upcomingCollectionView.delegate = self
-
-    sliderCollectionView.register(cellType: SliderCollectionViewCell.self)
-    popularCollectionView.register(cellType: HomeCollectionViewCell.self)
-    upcomingCollectionView.register(cellType: HomeCollectionViewCell.self)
+    homeTableView.register(headerFooterViewType: HomeTableHeaderView.self)
+    homeTableView.register(cellType: SliderTableViewCell.self)
+    homeTableView.register(cellType: PopularTableViewCell.self)
+    homeTableView.register(cellType: UpcomingTableViewCell.self)
   }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-  public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    if collectionView == sliderCollectionView {
-      return movies.count
-    } else if collectionView == popularCollectionView {
-      return popularMovies.count
-    } else {
-      return upcomingMovies.count
-    }
+extension HomeViewController: UITableViewDelegate {
+  public func numberOfSections(in tableView: UITableView) -> Int {
+    return sections.count
   }
 
-  public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    if collectionView == sliderCollectionView {
-      let sliderCell: SliderCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-      let movie = movies[indexPath.row]
-      sliderCell.movie = movie
-      return sliderCell
-    } else if collectionView == popularCollectionView {
-      let homeCell: HomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-      let movie = popularMovies[indexPath.row]
-      homeCell.movie = movie
-      return homeCell
-    } else if collectionView == upcomingCollectionView {
-      let homeCell: HomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-      let movie = upcomingMovies[indexPath.row]
-      homeCell.movie = movie
-      return homeCell
+  public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    if sections[section] == .popular || sections[section] == .upcoming {
+      return 45
     }
-    return UICollectionViewCell()
+
+    return 0.01
+  }
+
+  public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 4
+  }
+
+  public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeTableHeaderView.reuseIdentifier) as? HomeTableHeaderView
+
+    if sections[section] == .popular {
+      header?.labelHeaderTitle.text = "Popular Movies"
+      header?.buttonSeeMore.isHidden = true
+    } else {
+      header?.labelHeaderTitle.text = "Upcoming Movies"
+      header?.buttonSeeMore.isHidden = true
+    }
+
+    header?.isHidden = sections[section] == .slider ? true : false
+
+    return header
   }
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+extension HomeViewController: UITableViewDataSource {
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    1
   }
 
-  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let sizeSlider = sliderCollectionView.frame.size
-    let sizePopular = popularCollectionView.frame.size
-    let sizeUpcoming = upcomingCollectionView.frame.size
-    if collectionView == sliderCollectionView {
-      return CGSize(width: sizeSlider.width, height: sizeSlider.height)
-    } else if collectionView == popularCollectionView {
-      return CGSize(width: 104, height: sizePopular.height)
-    } else {
-      return CGSize(width: 104, height: sizeUpcoming.height)
-    }
-  }
-
-  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    if collectionView == sliderCollectionView {
-      return 0.0
-    } else if collectionView == popularCollectionView {
-      return 8.0
-    } else {
-      return 8.0
-    }
-  }
-
-  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return 0.0
-  }
-
-  public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    if collectionView == sliderCollectionView {
-      let idMovie = movies[indexPath.row].id
-      let destination = self.router.navigateDetailView(idMovie)
-      self.navigationController?.pushViewController(destination, animated: true)
-    } else if collectionView == popularCollectionView {
-      let idMovie = popularMovies[indexPath.row].id
-      let destination = self.router.navigateDetailView(idMovie)
-      self.navigationController?.pushViewController(destination, animated: true)
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    switch sections[indexPath.section] {
+      case .slider:
+        let cell: SliderTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.safeLayoutArea = view.window?.safeAreaLayoutGuide.layoutFrame
+        cell.movies = movies
+        cell.movieTapHandler = { [weak self] idMovie in
+          guard let self = self else { return }
+          let destination = self.router.navigateDetailView(idMovie)
+          self.navigationController?.pushViewController(destination, animated: true)
+        }
+        return cell
+      case .popular:
+        let cell: PopularTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.movies = popularMovies
+        cell.movieTapHandler = { [weak self] idMovie in
+          guard let self = self else { return }
+          let destination = self.router.navigateDetailView(idMovie)
+          self.navigationController?.pushViewController(destination, animated: true)
+        }
+        return cell
+      case .upcoming:
+        let cell: UpcomingTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.movie = upcomingMovies
+        return cell
     }
   }
 }
